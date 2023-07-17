@@ -1,0 +1,31 @@
+<div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0">
+  <div class="section-title position-relative text-center" style="margin-bottom: 60px;">
+    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
+    <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+    <i class="far fa-heart text-white"></i>
+  </div>
+  <p class="text-center m-3 cursor-pointer">Open Photo and Video Gallery</p>
+  <div class="d-flex gallery-carousel">
+    <ng-container *ngFor="let imgsrc of imageArray">
+      <div class="gallery-item">
+        <img class="img-fluid w-100" src="https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5"
+          alt="">
+        <a class="d-flex justify-content-around">
+          <i class="fa fa-download text-white cursor-pointer"></i>
+          <i class="fa fa-folder-open text-white cursor-pointer"></i>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+  <p class="text-center m-3 cursor-pointer">Open Photo and Video Gallery</p>
+</div>
+<div class="d-flex h-70vh m-3">
+  <div class="d-flex gap-1 align-items-center flex-wrap h-100 justify-content-center w-70 overflow-y-scroll">
+    <ng-container *ngFor="let imageSrc of imageArray">
+      <img class="img-fluid w-24 object-fit-contain" src="{{imageSrc}}" alt="" (click)="onImageClick(imageSrc)">
+    </ng-container>
+  </div>
+  <div class="w-30 h-100" id="selected-image-container">
+    <img class="img-fluid object-fit-contain h-100 w-100" src="{{activeImage}}" alt="">
+  </div>
+</div>
