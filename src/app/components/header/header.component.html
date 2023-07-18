@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark py-3 py-lg-0 px-lg-5">
     <a href="index.html" class="navbar-brand d-block d-lg-none">
       <h1 class="font-secondary text-white mb-n2">Suhas <span class="text-primary">& </span> Veda </h1>
     </a>
@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
       <div class="navbar-nav ml-auto py-0">
-        <a href="#home" class="nav-item nav-link active">Home</a>
+        <a id="home-nav" class="nav-item nav-link active" (click)="onNavClick('home')">Home</a>
         <a href="#about" class="nav-item nav-link">About</a>
         <a href="#story" class="nav-item nav-link">Story</a>
         <a href="#gallery" class="nav-item nav-link">Gallery</a>

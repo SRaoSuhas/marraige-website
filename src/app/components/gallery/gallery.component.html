@@ -19,10 +19,10 @@
 <div class="d-flex h-70vh m-3">
   <div class="d-flex gap-1 align-items-center flex-wrap h-100 justify-content-center w-70 overflow-y-scroll">
     <ng-container *ngFor="let imageSrc of imageArray">
-      <img class="img-fluid w-24 object-fit-contain" src="{{imageSrc}}" alt="" (click)="onImageClick(imageSrc)">
+      <img class="img-fluid w-24 object-fit-contain cursor-pointer" src="{{imageSrc}}" alt="" (click)="onImageClick(imageSrc)">
     </ng-container>
   </div>
   <div class="w-30 h-100" id="selected-image-container">
-    <img class="img-fluid object-fit-contain h-100 w-100" src="{{activeImage}}" alt="">
+    <img class="img-fluid object-fit-contain h-100 w-100 m-2" src="{{activeImage}}" alt="">
   </div>
 </div>
