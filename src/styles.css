@@ -10964,3 +10964,17 @@ a.text-dark:focus {
 .overflow-y-scroll {
   overflow-y: scroll !important;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 0 transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgrey;
+  border-radius: 10px;
+}
