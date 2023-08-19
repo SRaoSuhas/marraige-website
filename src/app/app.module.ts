@@ -11,8 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { EventComponent } from './components/event/event.component';
 import { FriendsAndFamilyComponent } from './components/friends-and-family/friends-and-family.component';
-import { TimelineComponent } from './components/timeline/timeline.component';
-import { GalleryGridComponent } from './components/gallery-grid/gallery-grid.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { GalleryGridComponent } from './components/gallery-grid/gallery-grid.com
     GalleryComponent,
     EventComponent,
     FriendsAndFamilyComponent,
-    TimelineComponent,
-    GalleryGridComponent
+    VideosComponent
   ],
   imports: [
     BrowserModule,

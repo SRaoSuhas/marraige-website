@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  selector: 'app-videos',
+  templateUrl: './videos.component.html',
+  styleUrls: ['./videos.component.css']
 })
-export class GalleryComponent implements OnInit {
+export class VideosComponent implements OnInit {
   images: string[] = [
     "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
     "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
@@ -23,6 +23,7 @@ export class GalleryComponent implements OnInit {
 
   previousScreenSize = innerWidth;
   columns: string[][] = [];
+
   ngOnInit() {
     this.activeImage = this.images[0];
   }
@@ -51,13 +52,5 @@ export class GalleryComponent implements OnInit {
       const column = i % columnsNo;
       this.columns[column].push(this.images[i]);
     }
-  }
-
-  downloadImg(url:string){
-    window.open(url.replace("export=view","export=download"));
-  }
-
-  copyImgLink(url:string){
-    navigator.clipboard.writeText(url);
   }
 }
