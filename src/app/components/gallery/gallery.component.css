@@ -45,10 +45,54 @@
     cursor: pointer;
 }
 
-.img-filter{
-    filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3)) drop-shadow(0px 0px 10px rgba(0,0,0,.3));
+.img-filter {
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .3)) drop-shadow(0px 0px 10px rgba(0, 0, 0, .3));
 }
 
-.button{
-    border: none;
+.h-15 {
+    height: 15%;
+}
+
+.h-85 {
+    height: 85%;
+}
+
+.btn-blue {
+    color: blue;
+    border-color: blue;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 10rem;
+}
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: blue;
+}
+
+.btn-blue::focus {
+    outline: none;
+}
+
+.grid-width {
+    width: 70%;
+}
+
+.active-img-width {
+    width: 30%;
+}
+
+.justify-content-space-evenly{
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1000px) {
+    .h-70vh {
+        height: 50vh !important;
+    }
+
+    .grid-width,
+    .active-img-width {
+        width: 50%;
+    }
 }

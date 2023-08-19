@@ -53,5 +53,7 @@ export class CarouselComponent implements OnInit {
       }, 5000);
     }
   }
-
+  playVideo(url: string) {
+    window.open(url);
+  }
 }

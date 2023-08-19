@@ -10,14 +10,13 @@
                             <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">
                                 Are getting married</h3>
                         </div>
-                        <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/Jj7fX3gVe4g" data-target="#videoModal">
+                        <button type="button" class="btn-play mx-auto"
+                            (click)="playVideo('https://www.youtube.com/embed/Jj7fX3gVe4g')">
                             <span></span>
                         </button>
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="carousel-control-prev justify-content-start m-4">
             <span class="carousel-control-prev-icon cursor-pointer" (click)="slideClicked('prev')"></span>

@@ -6,26 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent implements OnInit {
-  images: string[] = [
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l"];
-  activeImage: string = "";
+  videoIds: string[] = [
+    "Jj7fX3gVe4g",
+    "Jj7fX3gVe4g",
+    "Jj7fX3gVe4g",
+    "Jj7fX3gVe4g",
+    "Jj7fX3gVe4g",
+    "Jj7fX3gVe4g"];
 
   previousScreenSize = innerWidth;
   columns: string[][] = [];
 
   ngOnInit() {
-    this.activeImage = this.images[0];
   }
 
   ngAfterViewInit() {
@@ -40,17 +32,33 @@ export class VideosComponent implements OnInit {
     }
   }
 
-  onImageClick(imgSrc: string) {
-    this.activeImage = imgSrc;
+  ngAfterViewChecked(){
+    if(this.previousScreenSize != innerWidth) {
+      this.previousScreenSize = innerWidth;
+      if (this.previousScreenSize < 600) {
+        this.generateMasonryGrid(1);
+      }
+      else if (this.previousScreenSize >= 600 && this.previousScreenSize < 1000) {
+        this.generateMasonryGrid(2);
+      }
+      else {
+        this.generateMasonryGrid(4);
+      }
+    }
+  }
+  
+  onThumbnailClick(videoId: string) {
+    window.open("https://www.youtube.com/embed/" + videoId);
   }
 
   generateMasonryGrid(columnsNo: number) {
+    this.columns = [];
     for (let i = 0; i < columnsNo; i++) {
       this.columns.push([]);
     }
-    for (let i = 0; i < this.images.length; i++) {
+    for (let i = 0; i < this.videoIds.length; i++) {
       const column = i % columnsNo;
-      this.columns[column].push(this.images[i]);
+      this.columns[column].push(this.videoIds[i]);
     }
   }
 }

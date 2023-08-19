@@ -1,0 +1,30 @@
+p {
+    margin: 0 !important;
+}
+
+.vertical-line {
+    border-left: 0.5px solid #E47A2E;
+    box-shadow: none;
+}
+
+.portfolio-container{
+    gap: 1rem !important
+}
+
+.portfolio-item {
+    width: 30%;
+}
+
+@media only screen and (max-width: 900px) {
+    .phone-no {
+        word-wrap: break-word;
+        font-size: 0.80rem;
+        white-space: break-spaces;
+    }
+
+    .name {
+        word-wrap: break-word;
+        font-size: 0.90rem;
+        white-space: break-spaces;
+    }
+}

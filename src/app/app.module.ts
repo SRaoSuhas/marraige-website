@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { VideoComponent } from './components/video/video.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { EventComponent } from './components/event/event.component';
@@ -19,7 +18,6 @@ import { VideosComponent } from './components/videos/videos.component';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
-    VideoComponent,
     AboutComponent,
     GalleryComponent,
     EventComponent,
