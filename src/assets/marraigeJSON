@@ -1,0 +1,84 @@
+{
+	"Carousel": {
+		"ImageIds": [],
+		"VideoId": "Jj7fX3gVe4g"
+	},
+	"About": {
+		"Groom": {
+			"Name": "Suhas",
+			"Description": "",
+			"ImageId": ""
+		},
+		"Bride": {
+			"Name": "Veda",
+			"Description": "",
+			"ImageId": ""
+		}
+	},
+	"Gallery": {
+		"Images": {
+			"BannerId": "",
+			"ImagesIds": []
+		},
+		"Videos": {
+			"BannerId": "",
+			"VideoIds": []
+		}
+	},
+	"Events": [
+		{
+			"Name": "Wedding",
+			"Location": "Havyaka Sabha Bhavan, Karki Naaka,<br>Honnavara (U.K) 581334",
+			"LocationURL": "https://goo.gl/maps/suQ6ssAoY32Jr3aw9",
+			"Date": "05/11/2023",
+			"Time": "10:20am",
+			"ImageId": ""
+		},
+		{
+			"Name": "Reception",
+			"Location": "S.B.G Convention Hall, Hanagud Road,<br>Hunsur, Mysuru 571105",
+			"LocationURL": "https://goo.gl/maps/KKxw3ncYeC14p8C97",
+			"Date": "08/11/2023",
+			"Time": "7:00pm",
+			"ImageId": ""
+		}
+	],
+	"Friends&Family": [
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		},
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		},
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		},
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		},
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		},
+		{
+			"Side": "Groom",
+			"Name": "S N Subramnaya Rao",
+			"PhoneNumber": "+91 94482 08653",
+			"ImageId": ""
+		}
+	]
+}

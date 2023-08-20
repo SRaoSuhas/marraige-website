@@ -11,7 +11,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { EventComponent } from './components/event/event.component';
 import { FriendsAndFamilyComponent } from './components/friends-and-family/friends-and-family.component';
 import { VideosComponent } from './components/videos/videos.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import { VideosComponent } from './components/videos/videos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

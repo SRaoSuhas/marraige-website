@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  constructor() { }
+  jsonDataResult: any;
+  constructor(private http: HttpClient) {
+    this.http.get('assets/marraigeJSON').subscribe((res) => {
+      this.jsonDataResult = res;
+    });
+  }
   maxPictures = 5;
   imageSlideArray: string[] = [];
   activeImage: string = "";
@@ -53,7 +58,7 @@ export class CarouselComponent implements OnInit {
       }, 5000);
     }
   }
-  playVideo(url: string) {
-    window.open(url);
+  playVideo() {
+    window.open("https://www.youtube.com/embed/"+this.jsonDataResult.Carousel.VideoId);
   }
 }
