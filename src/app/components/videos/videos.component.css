@@ -41,7 +41,7 @@ img {
 
 @media only screen and (max-width: 1000px) {
     .h-70vh {
-        height: 50vh ;
+        height: 50vh;
     }
 }
 
@@ -56,16 +56,16 @@ img {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    margin-top: 0 ;
-    display: block ;
-    box-sizing: content-box ;
-    width: 10px ;
-    height: 10px ;
-    border-radius: 100% ;
-    border: none ;
-    outline: none ;
-    padding: 20px ;
-    background: #FFFFFF ;
+    margin-top: 0;
+    display: block;
+    box-sizing: content-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background: #FFFFFF;
     cursor: pointer;
 }
 
@@ -76,14 +76,15 @@ img {
     width: 0;
     height: 0;
     left: 0px;
-    top: -4px;
+    top: -50%;
+    transform: translateX(0%) translateY(0%);
     border-left: 16px solid #E47A2E;
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
     cursor: pointer;
 }
 
-.youtube-play-btn::before{
+.youtube-play-btn::before {
     content: "";
     position: absolute;
     z-index: 0;

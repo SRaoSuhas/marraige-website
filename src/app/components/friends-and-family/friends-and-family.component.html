@@ -13,11 +13,11 @@
         </div>
         <div class="row portfolio-container justify-content-center align-content-center mx-3">
           <ng-container *ngFor="let person of groomsmenDetails">
-            <div class="portfolio-item">
-              <img class="img-fluid" src="./../../../assets/groomsmen-1.jpg" alt="">
+            <div class="portfolio-item mw-8rem">
+              <img class="img-fluid" src="https://drive.google.com/uc?export=view&id={{person.ImageId}}" alt="">
               <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3 name">{{person.name}}</h4>
-                <p class="phone-no">{{person.phoneNumber}}</p>
+                <h4 class="mb-3 name">{{person.Name}}</h4>
+                <p class="phone-no">{{person.PhoneNumber}}</p>
               </div>
             </div>
           </ng-container>
@@ -32,11 +32,11 @@
         </div>
         <div class="row portfolio-container justify-content-center align-content-center mx-3">
           <ng-container *ngFor="let person of bridesmaidDetails">
-            <div class="portfolio-item">
-              <img class="img-fluid" src="./../../../assets/groomsmen-1.jpg" alt="">
+            <div class="portfolio-item mw-8rem">
+              <img class="img-fluid" src="https://drive.google.com/uc?export=view&id={{person.ImageId}}" alt="">
               <div class="bg-secondary text-center p-4">
-                <h4 class="mb-3 name">{{person.name}}</h4>
-                <p class="phone-no">{{person.phoneNumber}}</p>
+                <h4 class="mb-3 name">{{person.Name}}</h4>
+                <p class="phone-no">{{person.PhoneNumber}}</p>
               </div>
             </div>
           </ng-container>

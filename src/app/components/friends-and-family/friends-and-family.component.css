@@ -14,17 +14,19 @@ p {
 .portfolio-item {
     width: 30%;
 }
-
+.mw-8rem{
+    min-width: 8rem;
+}
 @media only screen and (max-width: 900px) {
     .phone-no {
         word-wrap: break-word;
-        font-size: 0.80rem;
+        font-size: 0.75rem;
         white-space: break-spaces;
     }
 
     .name {
         word-wrap: break-word;
-        font-size: 0.90rem;
+        font-size: 0.75rem;
         white-space: break-spaces;
     }
 }
