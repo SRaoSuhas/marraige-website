@@ -1,4 +1,4 @@
-.nav-item{
+.nav-item {
     padding: 25px 10px;
     color: #FFFFFF;
     letter-spacing: 1px;
@@ -7,14 +7,59 @@
     cursor: pointer;
 }
 
+.headerFooterBg {
+    background: url("./../../../assets/brown.jpg") no-repeat;
+}
+
+
+#nav-menu-lap {
+    display: flex !important;
+}
+
+#nav-menu-mobile {
+    display: none !important;
+}
+
+.header-menu {
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+
+.h-10 {
+    height: 10vh;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.mob:hover {
+    filter: brightness(50%);
+}
+
+.sticky-top{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 @media only screen and (max-width: 1000px) {
-    .nav-item{
-        padding: 0;
+    .nav-item {
+        padding: 5px 10px;
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .navbar-brand{
-        margin: 1rem !important;
+@media only screen and (max-width: 850px) {
+    #nav-menu-lap {
+        display: none !important;
+    }
+
+    #nav-menu-mobile {
+        display: flex !important;
     }
 }

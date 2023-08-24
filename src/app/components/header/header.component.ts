@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import * as JSONdata from './../../../assets/marraige.json'
 import * as $ from 'jquery';
 
 @Component({
@@ -8,18 +8,20 @@ import * as $ from 'jquery';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  jsonDataResult: any;
-  constructor(private http: HttpClient) {
-    this.http.get('assets/marraigeJSON').subscribe((res) => {
-      this.jsonDataResult = res;
-    });
-  }
+  data:any;
   ngOnInit() {
+    this.data = JSONdata;
   }
-
+  openMenu = false;
   onNavClick(nav: string) {
     $('html, body').animate({
       'scrollTop': $("#" + nav).position().top
     }, 2000);
+    if(this.openMenu){
+      this.openMenuInMob();
+    }
+  }
+  openMenuInMob() {
+    this.openMenu = !this.openMenu;
   }
 }

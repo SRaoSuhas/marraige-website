@@ -1,18 +1,38 @@
-<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark py-3 py-lg-0 px-lg-5 d-flex justify-content-center">
-  <div class="d-flex align-items-center justify-content-between">
-    <div class="navbar-nav ml-auto py-0">
-      <a class="nav-item nav-link" (click)="onNavClick('about')">About</a>
-      <a class="nav-item nav-link" (click)="onNavClick('gallery')">Gallery</a>
-      <a class="nav-item nav-link" (click)="onNavClick('videos')">Videos</a>
+<nav
+  class="navbar sticky-top shadow-sm navbar-expand-lg bg-dark py-3 py-lg-0 px-lg-5 d-flex justify-content-center headerFooterBg gap-5rem flex-column">
+  <div>
+    <div id="nav-menu-lap" class="d-flex align-items-center justify-content-between">
+      <div class="navbar-nav ml-auto py-0">
+        <a class="nav-item nav-link mob" (click)="onNavClick('home')">Home</a>
+        <a class="nav-item nav-link mob" (click)="onNavClick('about')">About</a>
+        <a class="nav-item nav-link mob" (click)="onNavClick('gallery')">Gallery</a>
+      </div>
+      <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block cursor-pointer">
+        <h1 class="font-secondary text-white mb-n2">{{data.About.Groom.Name}} <span class="text-primary">&
+          </span> {{data.About.Bride.Name}} </h1>
+      </a>
+      <div class="navbar-nav mr-auto py-0">
+        <a class="nav-item nav-link mob" (click)="onNavClick('videos')">Videos</a>
+        <a class="nav-item nav-link mob" (click)="onNavClick('event')">Event</a>
+        <a class="nav-item nav-link mob" (click)="onNavClick('family')">Family</a>
+      </div>
     </div>
-    <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block">
-      <h1 class="font-secondary text-white mb-n2">{{jsonDataResult.About.Groom.Name}} <span class="text-primary">&
-        </span> {{jsonDataResult.About.Bride.Name}} </h1>
-    </a>
-    <div class="navbar-nav mr-auto py-0">
-      <a class="nav-item nav-link" (click)="onNavClick('event')">Event</a>
-      <a class="nav-item nav-link" (click)="onNavClick('family')">Family</a>
-      <a class="nav-item nav-link" (click)="onNavClick('contact')">Contact</a>
+    <div id="nav-menu-mobile" class="d-flex align-items-center justify-content-between">
+      <i class="fas fa-bars fa-lg header-menu" (click)="openMenuInMob()"></i>
+      <a (click)="onNavClick('home')" class="navbar-brand d-block cursor-pointer">
+        <h1 class="font-secondary text-white mb-n2">{{data.About.Groom.Name}} <span class="text-primary">&
+          </span> {{data.About.Bride.Name}} </h1>
+      </a>
     </div>
   </div>
+  <ng-container *ngIf="openMenu == true">
+    <div class="d-flex flex-column align-items-center w-100">
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('home')">Home</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('about')">About</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('gallery')">Gallery</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('videos')">Videos</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('event')">Event</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('family')">Family</a>
+    </div>
+  </ng-container>
 </nav>

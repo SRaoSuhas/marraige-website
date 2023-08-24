@@ -1,23 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as JSONdata from './../../../assets/marraige.json'
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent implements OnInit {
-  videoIds: string[] = [
-    "Jj7fX3gVe4g",
-    "Jj7fX3gVe4g",
-    "Jj7fX3gVe4g",
-    "Jj7fX3gVe4g",
-    "Jj7fX3gVe4g",
-    "Jj7fX3gVe4g"];
-
   previousScreenSize = innerWidth;
   columns: string[][] = [];
-
+  data: any;
   ngOnInit() {
+    this.data = JSONdata;
   }
 
   ngAfterViewInit() {
@@ -32,8 +25,8 @@ export class VideosComponent implements OnInit {
     }
   }
 
-  ngAfterViewChecked(){
-    if(this.previousScreenSize != innerWidth) {
+  ngAfterViewChecked() {
+    if (this.previousScreenSize != innerWidth) {
       this.previousScreenSize = innerWidth;
       if (this.previousScreenSize < 600) {
         this.generateMasonryGrid(1);
@@ -46,7 +39,7 @@ export class VideosComponent implements OnInit {
       }
     }
   }
-  
+
   onThumbnailClick(videoId: string) {
     window.open("https://www.youtube.com/embed/" + videoId);
   }
@@ -56,9 +49,9 @@ export class VideosComponent implements OnInit {
     for (let i = 0; i < columnsNo; i++) {
       this.columns.push([]);
     }
-    for (let i = 0; i < this.videoIds.length; i++) {
+    for (let i = 0; i < this.data.Gallery.Videos.VideoIds.length; i++) {
       const column = i % columnsNo;
-      this.columns[column].push(this.videoIds[i]);
+      this.columns[column].push(this.data.Gallery.Videos.VideoIds[i]);
     }
   }
 }

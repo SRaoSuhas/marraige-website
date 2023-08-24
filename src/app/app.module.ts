@@ -12,6 +12,7 @@ import { EventComponent } from './components/event/event.component';
 import { FriendsAndFamilyComponent } from './components/friends-and-family/friends-and-family.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountdownComponent } from './components/countdown/countdown.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     GalleryComponent,
     EventComponent,
     FriendsAndFamilyComponent,
-    VideosComponent
+    VideosComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

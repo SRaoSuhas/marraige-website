@@ -7,7 +7,7 @@ p {
     box-shadow: none;
 }
 
-.portfolio-container{
+.portfolio-container {
     gap: 1rem !important
 }
 
@@ -15,16 +15,28 @@ p {
     width: 30%;
 }
 
+.phone-no {
+    word-wrap: break-word;
+    font-size: 0.80rem;
+    white-space: break-spaces;
+}
+
+.name {
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    white-space: break-spaces;
+}
+
 @media only screen and (max-width: 900px) {
-    .phone-no {
-        word-wrap: break-word;
-        font-size: 0.80rem;
-        white-space: break-spaces;
+
+    .portfolio-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width: 1300px) {
+    .portfolio-item {
+        width: 45% !important;
     }
 
-    .name {
-        word-wrap: break-word;
-        font-size: 0.90rem;
-        white-space: break-spaces;
-    }
 }

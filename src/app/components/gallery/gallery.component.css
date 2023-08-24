@@ -82,8 +82,35 @@
     width: 30%;
 }
 
-.justify-content-space-evenly{
+.justify-content-space-evenly {
     justify-content: space-evenly;
+}
+
+.tabs {
+    margin: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.tab {
+    border: solid 1px;
+    border-radius: 10px;
+    background: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.tab:hover {
+    background: lightblue;
+}
+
+.tab.active {
+    background: royalblue;
+    color: white;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -94,5 +121,12 @@
     .grid-width,
     .active-img-width {
         width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .btn {
+        margin: 0.5rem;
+        font-size: 0.625rem;
     }
 }
