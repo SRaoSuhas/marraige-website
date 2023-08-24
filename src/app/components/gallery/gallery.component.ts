@@ -1,23 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  jsonDataResult: any;
-  constructor(private http: HttpClient) {
-    this.http.get('assets/marraigeJSON').subscribe((res) => {
-      this.jsonDataResult = res;
-      this.activeImageId = this.jsonDataResult.Gallery.Images.ImagesIds[0];
-    });
-  }
-  activeImageId: string = "";
+  images: string[] = [
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l"];
+  activeImage: string = "";
+
   previousScreenSize = 0;
   columns: string[][] = [];
   ngOnInit() {
     this.previousScreenSize = innerWidth;
+    this.activeImage = this.images[0];
   }
 
   ngAfterViewInit() {
@@ -32,8 +40,8 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  ngAfterViewChecked() {
-    if (this.previousScreenSize != innerWidth) {
+  ngAfterViewChecked(){
+    if(this.previousScreenSize != innerWidth) {
       this.previousScreenSize = innerWidth;
       if (this.previousScreenSize < 600) {
         this.generateMasonryGrid(1);
@@ -46,9 +54,9 @@ export class GalleryComponent implements OnInit {
       }
     }
   }
-
+  
   onImageClick(imgSrc: string) {
-    this.activeImageId = imgSrc;
+    this.activeImage = imgSrc;
   }
 
   generateMasonryGrid(columnsNo: number) {
@@ -56,17 +64,17 @@ export class GalleryComponent implements OnInit {
     for (let i = 0; i < columnsNo; i++) {
       this.columns.push([]);
     }
-    for (let i = 0; i < this.jsonDataResult.Gallery.Images.ImagesIds.length; i++) {
+    for (let i = 0; i < this.images.length; i++) {
       const column = i % columnsNo;
-      this.columns[column].push(this.jsonDataResult.Gallery.Images.ImagesIds[i]);
+      this.columns[column].push(this.images[i]);
     }
   }
 
-  downloadImg() {
-    window.open("https://drive.google.com/uc?export=download&id=" + this.activeImageId);
+  downloadImg(url:string){
+    window.open(url.replace("export=view","export=download"));
   }
 
-  copyImgLink() {
-    navigator.clipboard.writeText("https://drive.google.com/uc?export=view&id=" + this.activeImageId);
+  copyImgLink(url:string){
+    navigator.clipboard.writeText(url);
   }
 }

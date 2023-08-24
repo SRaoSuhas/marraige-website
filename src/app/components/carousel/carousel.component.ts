@@ -10,26 +10,28 @@ export class CarouselComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.http.get('assets/marraigeJSON').subscribe((res) => {
       this.jsonDataResult = res;
-      this.activeImageId = this.jsonDataResult.Carousel.ImageIds[0];
-      this.imageSlideArray = this.jsonDataResult.Carousel.ImageIds;
-      this.isNotonLoad = true;
     });
   }
+  maxPictures = 5;
   imageSlideArray: string[] = [];
-  activeImageId: string = "";
+  activeImage: string = "";
   activeImageIndex: number = 1;
   isSlideCliked: boolean = false;
-  isNotonLoad = false;
   ngOnInit() {
-
+    if (this.maxPictures > 0) {
+      for (var i = 1; i <= this.maxPictures; i++) {
+        this.imageSlideArray.push("./../../../assets/image-" + i + ".jpg");
+      }
+      this.activeImage = this.imageSlideArray[0];
+    }
   }
   ngAfterViewInit() {
     setInterval(() => {
-      if (!this.isSlideCliked && this.isNotonLoad) {
+      if (!this.isSlideCliked) {
         if (this.activeImageIndex == this.imageSlideArray.length) {
           this.activeImageIndex = 0;
         }
-        this.activeImageId = this.imageSlideArray[this.activeImageIndex]
+        this.activeImage = this.imageSlideArray[this.activeImageIndex]
         this.activeImageIndex++;
       }
     }, 3000);
@@ -40,14 +42,14 @@ export class CarouselComponent implements OnInit {
         this.activeImageIndex = this.imageSlideArray.length;
       }
       this.activeImageIndex--;
-      this.activeImageId = this.imageSlideArray[this.activeImageIndex];
+      this.activeImage = this.imageSlideArray[this.activeImageIndex];
     }
     else {
       if (this.activeImageIndex >= this.imageSlideArray.length - 1) {
         this.activeImageIndex = -1;
       }
       this.activeImageIndex++;
-      this.activeImageId = this.imageSlideArray[this.activeImageIndex];
+      this.activeImage = this.imageSlideArray[this.activeImageIndex];
     }
     if (!this.isSlideCliked) {
       this.isSlideCliked = true;
@@ -57,6 +59,6 @@ export class CarouselComponent implements OnInit {
     }
   }
   playVideo() {
-    window.open("https://www.youtube.com/embed/" + this.jsonDataResult.Carousel.VideoId);
+    window.open("https://www.youtube.com/embed/"+this.jsonDataResult.Carousel.VideoId);
   }
 }

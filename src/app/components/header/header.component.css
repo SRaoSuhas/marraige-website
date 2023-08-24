@@ -1,4 +1,4 @@
-.nav-item {
+.nav-item{
     padding: 25px 10px;
     color: #FFFFFF;
     letter-spacing: 1px;
@@ -7,18 +7,14 @@
     cursor: pointer;
 }
 
-.cursor-pointer {
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 1000px) {
-    .nav-item {
+    .nav-item{
         padding: 0;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .navbar-brand {
+    .navbar-brand{
         margin: 1rem !important;
     }
 }
