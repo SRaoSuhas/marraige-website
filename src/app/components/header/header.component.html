@@ -1,27 +1,35 @@
 <nav
-  class="navbar sticky-top shadow-sm navbar-expand-lg bg-dark py-3 py-lg-0 px-lg-5 d-flex justify-content-center headerFooterBg gap-5rem flex-column">
-  <div>
+  class="navbar sticky-top shadow-sm navbar-expand-lg py-3 py-lg-0 px-lg-5 d-flex justify-content-center headerBg gap-5rem flex-column">
+  <div class="menu-list">
     <div id="nav-menu-lap" class="d-flex align-items-center justify-content-between">
-      <div class="navbar-nav ml-auto py-0">
-        <a class="nav-item nav-link mob" (click)="onNavClick('home')">Home</a>
-        <a class="nav-item nav-link mob" (click)="onNavClick('about')">About</a>
-        <a class="nav-item nav-link mob" (click)="onNavClick('gallery')">Gallery</a>
+      <div>
+        <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block cursor-pointer">
+          <h1 class="font-secondary text-white mb-n2 text-center">{{data.About.Groom.Name}} <span class="text-primary">&
+            </span> {{data.About.Bride.Name}} </h1>
+            <p class="our-wedding-page">OUR WEDDING PAGE</p>
+        </a>
       </div>
-      <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block cursor-pointer">
-        <h1 class="font-secondary text-white mb-n2">{{data.About.Groom.Name}} <span class="text-primary">&
-          </span> {{data.About.Bride.Name}} </h1>
-      </a>
-      <div class="navbar-nav mr-auto py-0">
-        <a class="nav-item nav-link mob" (click)="onNavClick('videos')">Videos</a>
-        <a class="nav-item nav-link mob" (click)="onNavClick('event')">Events</a>
-        <a class="nav-item nav-link mob" (click)="onNavClick('family')">Friends & Family</a>
+      <div>
+        <div class="navbar-nav ml-auto py-0">
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('home')">Home</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('about')">About</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('gallery')">Gallery</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('videos')">Videos</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('event')">Events</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('family')">Friends
+            & Family</a>
+        </div>
       </div>
     </div>
     <div id="nav-menu-mobile" class="d-flex align-items-center justify-content-between">
       <i class="fas fa-bars fa-lg header-menu" (click)="openMenuInMob()"></i>
       <a (click)="onNavClick('home')" class="navbar-brand d-block cursor-pointer">
-        <h1 class="font-secondary text-white mb-n2">{{data.About.Groom.Name}} <span class="text-primary">&
+        <h1 class="font-secondary text-white mb-n2 text-center">{{data.About.Groom.Name}} <span class="text-primary">&
           </span> {{data.About.Bride.Name}} </h1>
+          <p class="our-wedding-page">OUR WEDDING PAGE</p>
       </a>
     </div>
   </div>

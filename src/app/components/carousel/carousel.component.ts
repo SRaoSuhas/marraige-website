@@ -28,27 +28,28 @@ export class CarouselComponent implements OnInit {
     }, 3000);
   }
 
-  slideClicked(item: string) {
-    if (item == 'prev') {
-      if (this.activeImageIndex <= 0) {
-        this.activeImageIndex = this.data.Carousel.ImageIds.length;
-      }
-      this.activeImageIndex--;
-    }
-    else {
-      if (this.activeImageIndex >= this.data.Carousel.ImageIds.length - 1) {
-        this.activeImageIndex = -1;
-      }
-      this.activeImageIndex++;
-    }
-    this.activeImageId = this.data.Carousel.ImageIds[this.activeImageIndex];
-    if (!this.isSlideCliked) {
-      this.isSlideCliked = true;
-      setTimeout(() => {
-        this.isSlideCliked = false;
-      }, 5000);
-    }
-  }
+  // slideClicked(item: string) {
+  //   if (!this.isSlideCliked) {
+  //     this.isSlideCliked = true;
+  //     setTimeout(() => {
+  //       this.isSlideCliked = false;
+  //     }, 5000);
+  //   }
+  //   if (item == 'prev') {
+  //     if (this.activeImageIndex <= 0) {
+  //       this.activeImageIndex = this.data.Carousel.ImageIds.length;
+  //     }
+  //     this.activeImageIndex--;
+  //   }
+  //   else {
+  //     if (this.activeImageIndex >= this.data.Carousel.ImageIds.length - 1) {
+  //       this.activeImageIndex = -1;
+  //     }
+  //     this.activeImageIndex++;
+  //   }
+  //   this.activeImageId = this.data.Carousel.ImageIds[this.activeImageIndex];
+   
+  // }
 
   playVideo() {
     window.open("https://www.youtube.com/embed/" + this.data.Carousel.VideoId);

@@ -8,16 +8,19 @@ import * as $ from 'jquery';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  data:any;
+  data: any;
   ngOnInit() {
     this.data = JSONdata;
+    var headerImg = "https://drive.google.com/uc?export=view&id=" + this.data.HeaderBackground;
+    $(".headerBg").css("background-image", "url(" + headerImg + ")");
   }
   openMenu = false;
   onNavClick(nav: string) {
-    $('html, body').animate({
+    $('html,body').animate({
       'scrollTop': $("#" + nav).position().top
-    }, 2000);
-    if(this.openMenu){
+    }, 1000);
+ 
+    if (this.openMenu) {
       this.openMenuInMob();
     }
   }

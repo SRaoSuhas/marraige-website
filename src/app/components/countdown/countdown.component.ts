@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-countdown',
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.css']
 })
-export class CountdownComponent implements OnInit{
+export class CountdownComponent implements OnInit {
   seconds = "";
   minutes = "";
   hours = "";
   days = "";
   months = "";
   ngOnInit() {
-    const newDate: number = new Date('Nov 05 23 10:19:59').getTime();
+    const newDate: number = new Date('Aug 26 23 13:46:30').getTime();
     const countdown = setInterval(() => {
       const date: number = new Date().getTime();
       const diff: number = newDate - date;
@@ -29,8 +29,9 @@ export class CountdownComponent implements OnInit{
       this.days = d < 10 ? '0' + d : String(d);
       this.months = m < 10 ? '0' + m : String(m);
 
-      if (diff === 0) {
+      if (diff <= 0) {
         clearInterval(countdown);
+        $(".countdown").addClass("d-none");
       }
     }, 1000);
   }

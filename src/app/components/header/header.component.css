@@ -7,8 +7,8 @@
     cursor: pointer;
 }
 
-.headerFooterBg {
-    background: url("./../../../assets/brown.jpg") no-repeat;
+.headerBg {
+    background: no-repeat;
 }
 
 
@@ -40,12 +40,23 @@
     filter: brightness(50%);
 }
 
-.sticky-top{
+.sticky-top {
     position: sticky;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
+}
+
+.menu-list {
+    width: 100%;
+}
+
+.our-wedding-page {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -61,5 +72,9 @@
 
     #nav-menu-mobile {
         display: flex !important;
+    }
+
+    .menu-list {
+        width: auto;
     }
 }
