@@ -10664,7 +10664,6 @@ a.text-dark:focus {
 
 .back-to-top {
   position: fixed;
-  display: none;
   text-align: center;
   right: 30px;
   bottom: 30px;
@@ -10907,7 +10906,7 @@ a.text-dark:focus {
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/assets/gallery.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 1)), url(../src/assets/gallery.jpg), no-repeat center center;
   background-size: cover;
 }
 

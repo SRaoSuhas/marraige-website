@@ -1,24 +1,46 @@
-<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark py-3 py-lg-0 px-lg-5">
-    <a href="index.html" class="navbar-brand d-block d-lg-none">
-      <h1 class="font-secondary text-white mb-n2">Suhas <span class="text-primary">& </span> Veda </h1>
-    </a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-      <div class="navbar-nav ml-auto py-0">
-        <a id="home-nav" class="nav-item nav-link active" (click)="onNavClick('home')">Home</a>
-        <a href="#about" class="nav-item nav-link">About</a>
-        <a href="#story" class="nav-item nav-link">Story</a>
-        <a href="#gallery" class="nav-item nav-link">Gallery</a>
+<nav
+  class="navbar sticky-top shadow-sm navbar-expand-lg py-3 py-lg-0 px-lg-5 d-flex justify-content-center headerBg gap-5rem flex-column">
+  <div class="menu-list">
+    <div id="nav-menu-lap" class="d-flex align-items-center justify-content-between">
+      <div>
+        <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block cursor-pointer">
+          <h1 class="font-secondary text-white mb-n2 text-center">{{data.About.Groom.Name}} <span class="text-primary">&
+            </span> {{data.About.Bride.Name}} </h1>
+            <p class="our-wedding-page">OUR WEDDING PAGE</p>
+        </a>
       </div>
-      <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-        <h1 class="font-secondary text-white mb-n2">Suhas <span class="text-primary">& </span> Veda </h1>
-      </a>
-      <div class="navbar-nav mr-auto py-0">
-        <a href="#family" class="nav-item nav-link">Family</a>
-        <a href="#event" class="nav-item nav-link">Event</a>
-        <a href="#contact" class="nav-item nav-link">Contact</a>
+      <div>
+        <div class="navbar-nav ml-auto py-0">
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('home')">Home</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('about')">About</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('gallery')">Gallery</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('videos')">Videos</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex"
+            (click)="onNavClick('event')">Events</a>
+          <a class="nav-item nav-link mob text-center align-items-center d-flex" (click)="onNavClick('family')">Friends
+            & Family</a>
+        </div>
       </div>
     </div>
-  </nav>
+    <div id="nav-menu-mobile" class="d-flex align-items-center justify-content-between">
+      <i class="fas fa-bars fa-lg header-menu" (click)="openMenuInMob()"></i>
+      <a (click)="onNavClick('home')" class="navbar-brand d-block cursor-pointer">
+        <h1 class="font-secondary text-white mb-n2 text-center">{{data.About.Groom.Name}} <span class="text-primary">&
+          </span> {{data.About.Bride.Name}} </h1>
+          <p class="our-wedding-page">OUR WEDDING PAGE</p>
+      </a>
+    </div>
+  </div>
+  <ng-container *ngIf="openMenu == true">
+    <div class="d-flex flex-column align-items-center w-100">
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('home')">Home</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('about')">About</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('gallery')">Gallery</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('videos')">Videos</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('event')">Event</a>
+      <a class="nav-item nav-link m-2 d-flex align-items-center mob" (click)="onNavClick('family')">Friends & Family</a>
+    </div>
+  </ng-container>
+</nav>

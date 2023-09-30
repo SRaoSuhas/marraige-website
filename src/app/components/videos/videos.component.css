@@ -1,0 +1,103 @@
+.containersss {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.columnsss {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.overlaysss {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.postsss:hover .overlaysss {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    .h-70vh {
+        height: 50vh ;
+    }
+}
+
+.thumbnailPosts {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.youtube-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: 0 ;
+    display: block ;
+    box-sizing: content-box ;
+    width: 10px ;
+    height: 10px ;
+    border-radius: 100% ;
+    border: none ;
+    outline: none ;
+    padding: 20px ;
+    background: #FFFFFF ;
+    cursor: pointer;
+}
+
+.youtube-play-btn span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: -4px;
+    border-left: 16px solid #E47A2E;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    cursor: pointer;
+}
+
+.youtube-play-btn::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.max-h-70vh{
+    max-height: 70vh;
+}

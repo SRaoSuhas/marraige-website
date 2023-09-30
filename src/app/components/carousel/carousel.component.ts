@@ -1,57 +1,57 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as JSONdata from './../../../assets/marraige.json'
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  constructor() { }
-  maxPictures = 5;
-  imageSlideArray: string[] = [];
-  activeImage: string = "";
+  activeImageId: string = "";
   activeImageIndex: number = 1;
   isSlideCliked: boolean = false;
+  data: any;
+
   ngOnInit() {
-    if (this.maxPictures > 0) {
-      for (var i = 1; i <= this.maxPictures; i++) {
-        this.imageSlideArray.push("./../../../assets/image-" + i + ".jpg");
-      }
-      this.activeImage = this.imageSlideArray[0];
-    }
+    this.data = JSONdata;
+    this.activeImageId = this.data.Carousel.ImageIds[0];
   }
+
   ngAfterViewInit() {
     setInterval(() => {
       if (!this.isSlideCliked) {
-        if (this.activeImageIndex == this.imageSlideArray.length) {
+        if (this.activeImageIndex == this.data.Carousel.ImageIds.length) {
           this.activeImageIndex = 0;
         }
-        this.activeImage = this.imageSlideArray[this.activeImageIndex]
+        this.activeImageId = this.data.Carousel.ImageIds[this.activeImageIndex];
         this.activeImageIndex++;
       }
     }, 3000);
   }
-  slideClicked(item: string) {
-    if (item == 'prev') {
-      if (this.activeImageIndex <= 0) {
-        this.activeImageIndex = this.imageSlideArray.length;
-      }
-      this.activeImageIndex--;
-      this.activeImage = this.imageSlideArray[this.activeImageIndex];
-    }
-    else {
-      if (this.activeImageIndex >= this.imageSlideArray.length - 1) {
-        this.activeImageIndex = -1;
-      }
-      this.activeImageIndex++;
-      this.activeImage = this.imageSlideArray[this.activeImageIndex];
-    }
-    if (!this.isSlideCliked) {
-      this.isSlideCliked = true;
-      setTimeout(() => {
-        this.isSlideCliked = false;
-      }, 5000);
-    }
-  }
 
+  // slideClicked(item: string) {
+  //   if (!this.isSlideCliked) {
+  //     this.isSlideCliked = true;
+  //     setTimeout(() => {
+  //       this.isSlideCliked = false;
+  //     }, 5000);
+  //   }
+  //   if (item == 'prev') {
+  //     if (this.activeImageIndex <= 0) {
+  //       this.activeImageIndex = this.data.Carousel.ImageIds.length;
+  //     }
+  //     this.activeImageIndex--;
+  //   }
+  //   else {
+  //     if (this.activeImageIndex >= this.data.Carousel.ImageIds.length - 1) {
+  //       this.activeImageIndex = -1;
+  //     }
+  //     this.activeImageIndex++;
+  //   }
+  //   this.activeImageId = this.data.Carousel.ImageIds[this.activeImageIndex];
+   
+  // }
+
+  playVideo() {
+    window.open("https://www.youtube.com/embed/" + this.data.Carousel.VideoId);
+  }
 }

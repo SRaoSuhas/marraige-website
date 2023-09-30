@@ -1,29 +1,86 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as JSONdata from './../../../assets/marraige.json'
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit {
-  q: string[] = ["https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-    "https://drive.google.com/uc?export=view&id=1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l"];
-  activeImage: string = "";
-  imageArray: string[] = [];
+  data: any;
+  activeImageId: string = '';
+  activeEvent: string = '';
+  activeEventIndex: number = 0;
+  previousScreenSize = 0;
+  eventslist: string[] = [];
+  columns: string[][] = [];
   ngOnInit() {
-    for (var i = 0; i < 14; i++) {
-      var r = Math.round(Math.random() * 5);
-      if (r >= 5) {
-        r = 4;
-      }
-      this.imageArray.push(this.q[r]);
-    }
-    this.activeImage = this.imageArray[0];
+    this.data = JSONdata;
+    this.previousScreenSize = innerWidth;
+    this.activeEvent = this.data.Gallery.Images.Events[0].Event;
+    this.activeImageId = this.data.Gallery.Images.Events[0].ImageIds[0];
+    this.data.Gallery.Images.Events.forEach((item: any) => {
+      this.eventslist.push(item.Event);
+    });
   }
-  onImageClick(imgSrc: string) {
-    this.activeImage = imgSrc;
+
+  ngAfterViewInit() {
+    this.screenSize();
+    $("#" + this.activeEvent).addClass("active");
+  }
+
+  ngAfterViewChecked() {
+    if (this.previousScreenSize != innerWidth) {
+      this.previousScreenSize = innerWidth;
+      this.screenSize();
+    }
+  }
+
+  screenSize() {
+    if (this.previousScreenSize < 600) {
+      this.generateMasonryGrid(1);
+    }
+    else if (this.previousScreenSize >= 600 && this.previousScreenSize < 1000) {
+      this.generateMasonryGrid(2);
+    }
+    else {
+      this.generateMasonryGrid(4);
+    }
+  }
+
+  onImageClick(imageId: string) {
+    this.activeImageId = imageId;
+  }
+
+  OnEventClick(event: string) {
+    this.activeEvent = event;
+    this.activeEventIndex = this.data.Gallery.Images.Events.findIndex((x: { Event: string; }) => x.Event == event);
+    this.screenSize();
+    $(".tab").removeClass("active");
+    $("#" + event).addClass("active");
+    $('#gallery-grid').scrollTop(0);
+  }
+
+  generateMasonryGrid(columnsNo: number) {
+    this.columns = [];
+    if (this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length > 0) {
+      for (let i = 0; i < columnsNo; i++) {
+        this.columns.push([]);
+      }
+      for (let i = 0; i < this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length; i++) {
+        const column = i % columnsNo;
+        this.columns[column].push(
+          this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds[i]
+        );
+      }
+      this.activeImageId = this.columns[0][0];
+    }
+  }
+
+  downloadImg() {
+    window.open('https://drive.google.com/uc?export=download&id=' + this.activeImageId);
+  }
+
+  copyImgLink() {
+    navigator.clipboard.writeText('https://drive.google.com/uc?export=view&id=' + this.activeImageId);
   }
 }

@@ -1,0 +1,8 @@
+.footerBg{
+    background: url("./../../../assets/wall.jpg") no-repeat;
+}
+
+.name-label{
+    color: #000;
+    font-weight: bolder;
+}

@@ -2,34 +2,21 @@
   <div class="container py-5">
     <div class="section-title position-relative text-center">
       <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
-      <h1 class="font-secondary display-4">Our Wedding Event</h1>
+      <h1 class="font-secondary display-4">Our Wedding Events</h1>
       <i class="far fa-heart text-dark"></i>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <h5 class="font-weight-normal text-muted mb-3 pb-3">Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum
-          sea vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem elitr justo</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 border-right border-primary">
-        <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-          <img class="img-fluid mb-4" src="./../../../assets/event-1.jpg" alt="">
-          <h4 class="mb-3">Wedding</h4>
-          <a href="https://goo.gl/maps/suQ6ssAoY32Jr3aw9" target="_blank" class="mb-2">Havyaka Sabha Bhavan, Karki
-            Naaka,<br>Honnavara (U.K) 581334</a>
-          <p class="mb-0">05/11/2023<br>10:20am</p>
+      <ng-container *ngFor="let event of data.Events;let i = index">
+        <div class="col-md-4 ">
+          <div class="text-center">
+            <img class="img-fluid mb-4 h-20" src="https://drive.google.com/uc?export=view&id={{event.ImageId}}" alt="">
+            <h4 class="mb-3">{{event.Name}}</h4>
+            <p class="m-0">{{event.Location}}</p>
+            <a href="{{event.LocationURL}}" target="_blank" class="m-0">View in MAP</a>
+            <p class="mb-0">{{event.Date}}<br>{{event.Time}}</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="text-center text-md-left ml-md-3">
-          <img class="img-fluid mb-4" src="./../../../assets/event-2.jpg" alt="">
-          <h4 class="mb-3">Reception</h4>
-          <a href="https://goo.gl/maps/KKxw3ncYeC14p8C97" target="_blank" class="mb-2">S.B.G Convention
-            Hall, Hanagud Road,<br>Hunsur, Mysuru 571105</a>
-          <p class="mb-0">08/11/2023<br>7:00pm</p>
-        </div>
-      </div>
+        </ng-container>
     </div>
   </div>
 </div>

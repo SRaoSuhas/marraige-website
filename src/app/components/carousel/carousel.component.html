@@ -2,28 +2,28 @@
     <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                <img class="position-absolute w-100 h-100" src="{{activeImage}}" style="object-fit: cover;">
+                <img class="position-absolute w-100 h-100" src="https://drive.google.com/uc?export=view&id={{activeImageId}}" style="object-fit: cover;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Suhas & Veda</h1>
+                        <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4 d-flex align-items-center">
+                            {{data.About.Groom.Name}} <p class="font-size-small mx-5 mb-0">&</p>{{data.About.Bride.Name}}</h1>
                         <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                             <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">
                                 Are getting married</h3>
                         </div>
-                        <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/Jj7fX3gVe4g" data-target="#videoModal">
+                        <button type="button" class="btn-play mx-auto"
+                            (click)="playVideo()">
                             <span></span>
                         </button>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="carousel-control-prev justify-content-start m-4">
+        <!-- <div class="carousel-control-prev justify-content-start m-4">
             <span class="carousel-control-prev-icon cursor-pointer" (click)="slideClicked('prev')"></span>
         </div>
         <div class="carousel-control-next justify-content-end m-4">
             <span class="carousel-control-next-icon cursor-pointer" (click)="slideClicked('next')"></span>
-        </div>
+        </div> -->
     </div>
 </div>
