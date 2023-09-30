@@ -6,12 +6,11 @@ import * as JSONdata from './../../../assets/marraige.json'
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit{
-  data:any;
+export class FooterComponent implements OnInit {
+  data: any;
   ngOnInit() {
     this.data = JSONdata;
-    var footerImg= "./../../../assets/wall.jpg";
-   // var footerImg = "https://drive.google.com/uc?export=view&id=" + this.data.FooterBackground;
+    var footerImg = "https://drive.google.com/uc?export=view&id=" + this.data.FooterBackground;
     $(".footerBg").css("background-image", "url(" + footerImg + ")");
   }
 }

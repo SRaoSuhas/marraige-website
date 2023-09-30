@@ -62,14 +62,17 @@ export class GalleryComponent implements OnInit {
 
   generateMasonryGrid(columnsNo: number) {
     this.columns = [];
-    for (let i = 0; i < columnsNo; i++) {
-      this.columns.push([]);
-    }
-    for (let i = 0; i < this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length; i++) {
-      const column = i % columnsNo;
-      this.columns[column].push(
-        this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds[i]
-      );
+    if (this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length > 0) {
+      for (let i = 0; i < columnsNo; i++) {
+        this.columns.push([]);
+      }
+      for (let i = 0; i < this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length; i++) {
+        const column = i % columnsNo;
+        this.columns[column].push(
+          this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds[i]
+        );
+      }
+      this.activeImageId = this.columns[0][0];
     }
   }
 

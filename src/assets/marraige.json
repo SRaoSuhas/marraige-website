@@ -1,6 +1,6 @@
 {
-    "HeaderBackground":"1SdaCn_RKYe3eD6Hjcl0cq6UwhzVbCO74",
-    "FooterBackground":"1Qlej2ZGyk74MwCY8k_BRgaPwekus8_mv",
+    "HeaderBackground": "1SdaCn_RKYe3eD6Hjcl0cq6UwhzVbCO74",
+    "FooterBackground": "1Qlej2ZGyk74MwCY8k_BRgaPwekus8_mv",
     "Carousel": {
         "ImageIds": [
             "15Legs4hdX5CXYZQFxz4_6yr_5dRFNyIS",
@@ -14,12 +14,12 @@
     "About": {
         "Groom": {
             "Name": "Suhas",
-            "Description": "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.",
+            "Description": "",
             "ImageId": "165PLkbB3UcsNfFAvu3_CVdvQvxEYt7eh"
         },
         "Bride": {
             "Name": "Veda",
-            "Description": "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.",
+            "Description": "",
             "ImageId": "1aUTUlAU19GYU895Zh_LR2qyhPt2SI5_p"
         }
     },
@@ -30,26 +30,48 @@
                 {
                     "Event": "Engagement",
                     "ImageIds": [
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
-                        "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
-                        "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l"
+                        "1-paazRC_-lJ7JtjnMpdbRRXwbCo-grWw",
+                        "1-snw8eqWqCfOv9uwcloWUBO6B3Kkxn46",
+                        "1-vIJtp3ro7hvNBEi6mM2GL6EUfDe3it_",
+                        "10-qd7K96fjApnBIm2qE6YA6q5GlyG7oC",
+                        "102i7bRR0rH462uq3gshKilOYUcNRsMax",
+                        "103Ac2aWOL35vnIJgB52RLwVhsuogFRON",
+                        "103ZR6XITEW0PYtGLA8gUVnFCfiZZ1-6D",
+                        "104TAKZr7S0EbPpAA7SzAmhS-xWbjNtep",
+                        "109UwzHXSOm2LX6-9tc7gvROtm5_Id5wT",
+                        "10Dx6h7E1N38uA9f6zcrLY8DvH3yIfv6X",
+                        "10GBtkgHhbjcP68kGk2dqQoBG14wA49Ak",
+                        "10IHUdWY__yrffvhO8DZrjDH7AV2JcF2S",
+                        "10KvAxINx7n5l6Hy0t6qO87kPt3zbuF-u",
+                        "10Oh-FZPUc6Mbd8K7cmpDfB_65wTwbJjP",
+                        "10RIssfjSS7oEHrNwFzpQJexz5OXwNxOA",
+                        "10RjQX1X_hmu2uUoCdQxT8_kUvOhVIpS7"
                     ]
+                },
+                {
+                    "Event": "Pre-Wedding",
+                    "ImageIds": []
+                },
+                {
+                    "Event": "Bride-to-be",
+                    "ImageIds": []
+                },
+                {
+                    "Event": "Wedding",
+                    "ImageIds": []
+                },
+                {
+                    "Event": "Reception",
+                    "ImageIds": []
                 }
             ]
         },
         "Videos": {
             "BannerId": "",
             "VideoIds": [
-                
+                "evUD1VHOpOE",
+                "HI2FQ7UGWw4",
+                "i4yzAKH0sfE"               
             ]
         }
     },
@@ -75,49 +97,54 @@
         "Groom": [
             {
                 "Name": "S N Subramanya Rao",
-                "ImageId": "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+                "ImageId": "1OQe5ugYsw0hMw25fgDpmF5080x220UDl",
                 "PhoneNumber": "+91 94482 08653"
             },
             {
                 "Name": "Shree Shyla",
-                "ImageId": "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+                "ImageId": "1OQe5ugYsw0hMw25fgDpmF5080x220UDl",
                 "PhoneNumber": "+91 94489 59031"
             },
             {
                 "Name": "Sudhanva S Rao",
-                "ImageId": "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+                "ImageId": "1OQe5ugYsw0hMw25fgDpmF5080x220UDl",
                 "PhoneNumber": "+91 63641 38400"
             },
             {
                 "Name": "Nandakumar",
-                "ImageId": "1ZG4i157iOdV-5XZiaOc7g7gLw0DJbr1l",
+                "ImageId": "1OQe5ugYsw0hMw25fgDpmF5080x220UDl",
                 "PhoneNumber": "+91 95382 19637"
+            },
+            {
+                "Name": "Shamanth S Nadig",
+                "ImageId": "1fFhnPaaoJgf7WV45yHeSeA7Yn1E6qknB",
+                "PhoneNumber": "+91 77609 07052"
             }
         ],
         "Bride": [
             {
                 "Name": "K S Sathyanarayana",
-                "ImageId": "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+                "ImageId": "1dCo_uFkyUh9pzUQO1Bo5KaNEEc7RCILy",
                 "PhoneNumber": "+91 77604 02010"
             },
             {
                 "Name": "Shridhar Bhat",
-                "ImageId": "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+                "ImageId": "1pngLnK2g0F9t7OxagqwFmP73lvuHPlXk",
                 "PhoneNumber": "+91 99450 51593"
             },
             {
                 "Name": "Shankar Bhat",
-                "ImageId": "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+                "ImageId": "1XhXL7BUpmCKmcOG2qgt0JBbQOVXpGBMG",
                 "PhoneNumber": "+91 94801 29767"
             },
             {
                 "Name": "Gajanan Hegde",
-                "ImageId": "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+                "ImageId": "1-fHVgbesDwSDH-UzLswlfPMUeD7Z57pb",
                 "PhoneNumber": "+91 94485 42177"
             },
             {
                 "Name": "Keerthana S",
-                "ImageId": "1-MY45s7hDmzEBxW6pqqZBxMVWHxmOKj5",
+                "ImageId": "1JesWwxOr_5yw6inMMy4fNYFKBUH8cd0B",
                 "PhoneNumber": "+91 70220 96560"
             }
         ]

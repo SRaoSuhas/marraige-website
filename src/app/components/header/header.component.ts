@@ -16,10 +16,10 @@ export class HeaderComponent implements OnInit {
   }
   openMenu = false;
   onNavClick(nav: string) {
-    $('html,body').animate({
+    $('html, body').animate({
       'scrollTop': $("#" + nav).position().top
     }, 1000);
- 
+
     if (this.openMenu) {
       this.openMenuInMob();
     }
