@@ -1,4 +1,4 @@
-<div class="py-5" id="gallery">
+<div class="py-5 d-flex flex-column align-items-center" id="gallery">
   <div class="container-fluid bg-gallery" style="padding: 5rem 0">
     <div class="section-title position-relative text-center" style="margin-bottom: 60px;">
       <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
@@ -6,7 +6,7 @@
       <i class="far fa-heart text-white"></i>
     </div>
   </div>
-  <div class="tabs">
+  <div class="tabs" id="galleryTabs">
     <ng-container *ngFor="let event of eventslist">
       <button id="{{event}}" class="tab" (click)="OnEventClick(event)">{{event}}</button>
     </ng-container>
@@ -28,21 +28,21 @@
             </div>
           </ng-container>
         </div>
-        <div class="paginationList">
-          <ng-container *ngFor="let page of pagination">
-            <div id="paginationTiles-{{page}}" class="paginationTiles" (click)="onPaginationClick(page)">{{page}}</div>
-          </ng-container>
-        </div>
       </div>
       <div class="active-img-width h-100 d-flex flex-wrap justify-content-center" id="selected-image-container">
-        <img class="img-fluid object-fit-contain m-2 img-filter p-2 h-85"
-          src="../assets/{{activeImageId}}" alt="">
+        <img class="img-fluid object-fit-contain m-2 img-filter p-2 h-85" src="../assets/{{activeImageId}}" alt="">
         <div class="d-flex w-100 justify-content-space-evenly align-items-center flex-wrap h-15">
-          <button (click)="copyImgLink()" class="btn btn-blue">Copy link</button>
-          <button (click)="downloadImg()" target="_blank" class="btn btn-blue">Download</button>
+          <a href="../assets/{{activeImageId}}" class="btn btn-blue" download="Suhas Veda {{activeEvent}}">Download</a>
         </div>
       </div>
     </div>
+    <ng-container *ngIf="columns.length == 0">
+      <div class="paginationList">
+        <ng-container *ngFor="let page of pagination">
+          <div id="paginationTiles-{{page}}" class="paginationTiles" (click)="onPaginationClick(page)">{{page}}</div>
+        </ng-container>
+      </div>
+    </ng-container>
   </ng-container>
   <ng-container *ngIf="columns.length == 0">
     <div>Photos are yet to be uploaded.... Please wait</div>

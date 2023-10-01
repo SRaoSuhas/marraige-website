@@ -129,6 +129,10 @@
         margin: 0.5rem;
         font-size: 0.625rem;
     }
+
+    .h-85{
+        height: 70%;
+    }
 }
 
 .paginationList {

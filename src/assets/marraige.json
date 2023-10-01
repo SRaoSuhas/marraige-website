@@ -1,6 +1,16 @@
 {
-    "HeaderBackground": "headerAndFooter/Header.webp",
-    "FooterBackground": "headerAndFooter/Footer.webp",
+    "About": {
+        "Bride": {
+            "Description": "",
+            "ImageId": "about/Veda.jpg",
+            "Name": "Veda"
+        },
+        "Groom": {
+            "Description": "",
+            "ImageId": "about/Suhas.jpg",
+            "Name": "Suhas"
+        }
+    },
     "Carousel": {
         "ImageIds": [
             "home/Home (1).jpg",
@@ -12,17 +22,85 @@
         ],
         "VideoId": "evUD1VHOpOE"
     },
-    "About": {
-        "Groom": {
-            "Name": "Suhas",
-            "Description": "",
-            "ImageId": "about/Suhas.jpg"
+    "Events": [
+        {
+            "Date": "05/11/2023",
+            "ImageId": "events/Indian Wedding.webp",
+            "Location": "Havyaka Sabha Bhavan, Karki Naaka, Honnavara (U.K) 581334",
+            "LocationURL": "https://goo.gl/maps/suQ6ssAoY32Jr3aw9",
+            "Name": "Wedding",
+            "Time": "10:20am"
         },
-        "Bride": {
-            "Name": "Veda",
-            "Description": "",
-            "ImageId": "about/Veda.jpg"
+        {
+            "Date": "08/11/2023",
+            "ImageId": "events/Indian Reception.webp",
+            "Location": "S.B.G Convention Hall, Hanagud Road, Hunsur, Mysuru 571105",
+            "LocationURL": "https://goo.gl/maps/KKxw3ncYeC14p8C97",
+            "Name": "Reception",
+            "Time": "7:00pm"
         }
+    ],
+    "FooterBackground": "headerAndFooter/Footer.webp",
+    "FriendsAndFamily": {
+        "Bride": [
+            {
+                "ImageId": "friendsAndFamily/brideside/K S Sathyanarayana.webp",
+                "Name": "K S Sathyanarayana",
+                "PhoneNumber": "+91 77604 02010"
+            },
+            {
+                "ImageId": "friendsAndFamily/brideside/Shridhar Bhat.webp",
+                "Name": "Shridhar Bhat",
+                "PhoneNumber": "+91 99450 51593"
+            },
+            {
+                "ImageId": "friendsAndFamily/brideside/Shankar Bhat.webp",
+                "Name": "Shankar Bhat",
+                "PhoneNumber": "+91 94801 29767"
+            },
+            {
+                "ImageId": "friendsAndFamily/brideside/Gajanan Hegde.webp",
+                "Name": "Gajanan Hegde",
+                "PhoneNumber": "+91 94485 42177"
+            },
+            {
+                "ImageId": "friendsAndFamily/brideside/Keerthana S.webp",
+                "Name": "Keerthana S",
+                "PhoneNumber": "+91 70220 96560"
+            }
+        ],
+        "Groom": [
+            {
+                "ImageId": "friendsAndFamily/groomside/S N Subramanya Rao.webp",
+                "Name": "S N Subramanya Rao",
+                "PhoneNumber": "+91 94482 08653"
+            },
+            {
+                "ImageId": "friendsAndFamily/groomside/Shree Shyla.webp",
+                "Name": "Shree Shyla",
+                "PhoneNumber": "+91 94489 59031"
+            },
+            {
+                "ImageId": "friendsAndFamily/groomside/Sudhanva S Rao.webp",
+                "Name": "Sudhanva S Rao",
+                "PhoneNumber": "+91 63641 38400"
+            },
+            {
+                "ImageId": "friendsAndFamily/groomside/Chandan H R.webp",
+                "Name": "Chandan H R",
+                "PhoneNumber": "+91 91138 08868"
+            },
+            {
+                "ImageId": "friendsAndFamily/groomside/Nandakumar.webp",
+                "Name": "Nandakumar",
+                "PhoneNumber": "+91 95382 19637"
+            },
+            {
+                "ImageId": "friendsAndFamily/groomside/Shamanth S Nadig.webp",
+                "Name": "Shamanth S Nadig",
+                "PhoneNumber": "+91 77609 07052"
+            }
+        ]
     },
     "Gallery": {
         "Images": {
@@ -51,19 +129,23 @@
                 },
                 {
                     "Event": "Pre-Wedding",
-                    "ImageIds": []
+                    "ImageIds": [
+                    ]
                 },
                 {
                     "Event": "Bride-to-be",
-                    "ImageIds": []
+                    "ImageIds": [
+                    ]
                 },
                 {
                     "Event": "Wedding",
-                    "ImageIds": []
+                    "ImageIds": [
+                    ]
                 },
                 {
                     "Event": "Reception",
-                    "ImageIds": []
+                    "ImageIds": [
+                    ]
                 }
             ]
         },
@@ -76,83 +158,5 @@
             ]
         }
     },
-    "Events": [
-        {
-            "Name": "Wedding",
-            "Location": "Havyaka Sabha Bhavan, Karki Naaka, Honnavara (U.K) 581334",
-            "LocationURL": "https://goo.gl/maps/suQ6ssAoY32Jr3aw9",
-            "Date": "05/11/2023",
-            "Time": "10:20am",
-            "ImageId": "events/Indian Wedding.webp"
-        },
-        {
-            "Name": "Reception",
-            "Location": "S.B.G Convention Hall, Hanagud Road, Hunsur, Mysuru 571105",
-            "LocationURL": "https://goo.gl/maps/KKxw3ncYeC14p8C97",
-            "Date": "08/11/2023",
-            "Time": "7:00pm",
-            "ImageId": "events/Indian Reception.webp"
-        }
-    ],
-    "FriendsAndFamily": {
-        "Groom": [
-            {
-                "Name": "S N Subramanya Rao",
-                "ImageId": "friendsAndFamily/groomside/S N Subramanya Rao.webp",
-                "PhoneNumber": "+91 94482 08653"
-            },
-            {
-                "Name": "Shree Shyla",
-                "ImageId": "friendsAndFamily/groomside/Shree Shyla.webp",
-                "PhoneNumber": "+91 94489 59031"
-            },
-            {
-                "Name": "Sudhanva S Rao",
-                "ImageId": "friendsAndFamily/groomside/Sudhanva S Rao.webp",
-                "PhoneNumber": "+91 63641 38400"
-            },
-            {
-                "Name": "Chandan H R",
-                "ImageId": "friendsAndFamily/groomside/Chandan H R.webp",
-                "PhoneNumber": "+91 91138 08868"
-            },
-            {
-                "Name": "Nandakumar",
-                "ImageId": "friendsAndFamily/groomside/Nandakumar.webp",
-                "PhoneNumber": "+91 95382 19637"
-            },
-            {
-                "Name": "Shamanth S Nadig",
-                "ImageId": "friendsAndFamily/groomside/Shamanth S Nadig.webp",
-                "PhoneNumber": "+91 77609 07052"
-            }
-        ],
-        "Bride": [
-            {
-                "Name": "K S Sathyanarayana",
-                "ImageId": "friendsAndFamily/brideside/K S Sathyanarayana.webp",
-                "PhoneNumber": "+91 77604 02010"
-            },
-            {
-                "Name": "Shridhar Bhat",
-                "ImageId": "friendsAndFamily/brideside/Shridhar Bhat.webp",
-                "PhoneNumber": "+91 99450 51593"
-            },
-            {
-                "Name": "Shankar Bhat",
-                "ImageId": "friendsAndFamily/brideside/Shankar Bhat.webp",
-                "PhoneNumber": "+91 94801 29767"
-            },
-            {
-                "Name": "Gajanan Hegde",
-                "ImageId": "friendsAndFamily/brideside/Gajanan Hegde.webp",
-                "PhoneNumber": "+91 94485 42177"
-            },
-            {
-                "Name": "Keerthana S",
-                "ImageId": "friendsAndFamily/brideside/Keerthana S.webp",
-                "PhoneNumber": "+91 70220 96560"
-            }
-        ]
-    }
+    "HeaderBackground": "headerAndFooter/Header.webp"
 }
