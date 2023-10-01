@@ -9,7 +9,7 @@
       <ng-container *ngFor="let event of data.Events;let i = index">
         <div class="col-md-4 ">
           <div class="text-center">
-            <img class="img-fluid mb-4 h-20" src="https://drive.google.com/uc?export=view&id={{event.ImageId}}" alt="">
+            <img class="img-fluid mb-4 h-20" src="../assets/{{event.ImageId}}" alt="">
             <h4 class="mb-3">{{event.Name}}</h4>
             <p class="m-0">{{event.Location}}</p>
             <a href="{{event.LocationURL}}" target="_blank" class="m-0">View in MAP</a>

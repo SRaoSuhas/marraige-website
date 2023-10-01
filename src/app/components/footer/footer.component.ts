@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   data: any;
   ngOnInit() {
     this.data = JSONdata;
-    var footerImg = "https://drive.google.com/uc?export=view&id=" + this.data.FooterBackground;
+    var footerImg = "../assets/" + this.data.FooterBackground;
     $(".footerBg").css("background-image", "url(" + footerImg + ")");
   }
 }
