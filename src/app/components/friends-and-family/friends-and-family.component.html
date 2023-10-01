@@ -4,14 +4,14 @@
       <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>
       <i class="far fa-heart text-dark"></i>
     </div>
-    <div class="d-flex w-100 justify-content-around">
-      <div class="d-flex flex-column align-items-center w-50">
+    <div class="d-flex w-100 justify-content-around ">
+      <div class="d-flex flex-column align-items-center w-50 vertical-line">
         <div class="row">
-          <ul class="list-inline mb-4" id="portfolio-flters">
-            <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Grooms side</li>
+          <ul class="list-inline mb-4 px-0" id="portfolio-flters">
+            <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4">Grooms side</li>
           </ul>
         </div>
-        <div class="row portfolio-container justify-content-center align-content-center mx-3">
+        <div class="row m-0 p-0 portfolio-container justify-content-center align-content-center mx-2p">
           <ng-container *ngFor="let person of data.FriendsAndFamily.Groom">
             <div class="portfolio-item">
               <img class="img-fluid" src="../assets/{{person.ImageId}}" alt="">
@@ -23,14 +23,13 @@
           </ng-container>
         </div>
       </div>
-      <div class="vertical-line"></div>
       <div class="d-flex flex-column align-items-center w-50">
         <div class="row">
-          <ul class="list-inline mb-4" id="portfolio-flters">
-            <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Bride side</li>
+          <ul class="list-inline mb-4 px-0" id="portfolio-flters">
+            <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4">Bride side</li>
           </ul>
         </div>
-        <div class="row portfolio-container justify-content-center align-content-center mx-3">
+        <div class="row m-0 p-0 portfolio-container justify-content-center align-content-center mx-2p">
           <ng-container *ngFor="let person of data.FriendsAndFamily.Bride">
             <div class="portfolio-item">
               <img class="img-fluid" src="../assets/{{person.ImageId}}" alt="">

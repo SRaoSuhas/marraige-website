@@ -3,11 +3,12 @@
     "FooterBackground": "headerAndFooter/Footer.webp",
     "Carousel": {
         "ImageIds": [
-            "15Legs4hdX5CXYZQFxz4_6yr_5dRFNyIS",
-            "1KiAdaDSoJmxO9xTIveWhVkqzAzUDcZ79",
-            "1e15zzva6y6CG9LzjOxXjRb9wczHGaS8o",
-            "1iOdwowaxE0vorKR0vgMLOp8DbYtQnA9m",
-            "1oBuHJ66KmmUPn37j1_z4bwgSxhEEFVZV"
+            "home/Home (1).jpg",
+            "home/Home (2).jpg",
+            "home/Home (3).jpg",
+            "home/Home (4).jpg",
+            "home/Home (5).jpg",
+            "home/Home (6).jpg"
         ],
         "VideoId": "evUD1VHOpOE"
     },
@@ -15,12 +16,12 @@
         "Groom": {
             "Name": "Suhas",
             "Description": "",
-            "ImageId": "165PLkbB3UcsNfFAvu3_CVdvQvxEYt7eh"
+            "ImageId": "about/Suhas.jpg"
         },
         "Bride": {
             "Name": "Veda",
             "Description": "",
-            "ImageId": "1aUTUlAU19GYU895Zh_LR2qyhPt2SI5_p"
+            "ImageId": "about/Veda.jpg"
         }
     },
     "Gallery": {
@@ -30,22 +31,22 @@
                 {
                     "Event": "Engagement",
                     "ImageIds": [
-                        "1-paazRC_-lJ7JtjnMpdbRRXwbCo-grWw",
-                        "1-snw8eqWqCfOv9uwcloWUBO6B3Kkxn46",
-                        "1-vIJtp3ro7hvNBEi6mM2GL6EUfDe3it_",
-                        "10-qd7K96fjApnBIm2qE6YA6q5GlyG7oC",
-                        "102i7bRR0rH462uq3gshKilOYUcNRsMax",
-                        "103Ac2aWOL35vnIJgB52RLwVhsuogFRON",
-                        "103ZR6XITEW0PYtGLA8gUVnFCfiZZ1-6D",
-                        "104TAKZr7S0EbPpAA7SzAmhS-xWbjNtep",
-                        "109UwzHXSOm2LX6-9tc7gvROtm5_Id5wT",
-                        "10Dx6h7E1N38uA9f6zcrLY8DvH3yIfv6X",
-                        "10GBtkgHhbjcP68kGk2dqQoBG14wA49Ak",
-                        "10IHUdWY__yrffvhO8DZrjDH7AV2JcF2S",
-                        "10KvAxINx7n5l6Hy0t6qO87kPt3zbuF-u",
-                        "10Oh-FZPUc6Mbd8K7cmpDfB_65wTwbJjP",
-                        "10RIssfjSS7oEHrNwFzpQJexz5OXwNxOA",
-                        "10RjQX1X_hmu2uUoCdQxT8_kUvOhVIpS7"
+                        "gallery/engagement/Engagement (1).jpg",
+                        "gallery/engagement/Engagement (2).jpg",
+                        "gallery/engagement/Engagement (3).jpg",
+                        "gallery/engagement/Engagement (4).jpg",
+                        "gallery/engagement/Engagement (5).jpg",
+                        "gallery/engagement/Engagement (6).jpg",
+                        "gallery/engagement/Engagement (7).jpg",
+                        "gallery/engagement/Engagement (8).jpg",
+                        "gallery/engagement/Engagement (9).jpg",
+                        "gallery/engagement/Engagement (10).jpg",
+                        "gallery/engagement/Engagement (11).jpg",
+                        "gallery/engagement/Engagement (12).jpg",
+                        "gallery/engagement/Engagement (13).jpg",
+                        "gallery/engagement/Engagement (14).jpg",
+                        "gallery/engagement/Engagement (15).jpg",
+                        "gallery/engagement/Engagement (16).jpg"
                     ]
                 },
                 {
@@ -71,7 +72,7 @@
             "VideoIds": [
                 "evUD1VHOpOE",
                 "HI2FQ7UGWw4",
-                "i4yzAKH0sfE"               
+                "i4yzAKH0sfE"
             ]
         }
     },

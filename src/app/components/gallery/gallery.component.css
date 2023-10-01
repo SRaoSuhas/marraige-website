@@ -130,3 +130,23 @@
         font-size: 0.625rem;
     }
 }
+
+.paginationList {
+    display: flex;
+}
+
+.paginationTiles {
+    padding: 0.25rem;
+    border: solid 1px lightblue;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.paginationTiles.active {
+    background-color: blue;
+    color: white;
+}
