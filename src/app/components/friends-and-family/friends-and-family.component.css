@@ -3,7 +3,7 @@ p {
 }
 
 .vertical-line {
-    border-left: 0.5px solid #E47A2E;
+    border-right: 0.25px solid #E47A2E;
     box-shadow: none;
 }
 
@@ -31,6 +31,8 @@ p {
 
     .portfolio-item {
         width: 100%;
+        padding-right: 0rem !important;
+        padding-left: 0 !important;
     }
 }
 
@@ -38,5 +40,9 @@ p {
     .portfolio-item {
         width: 45% !important;
     }
+}
 
+.mx-2p {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
 }

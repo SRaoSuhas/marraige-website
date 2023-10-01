@@ -21,17 +21,22 @@
               <ng-container *ngFor="let imageId of column">
                 <div class="imageGridPosts">
                   <img class="imageGridImages img-fluid w-24 object-fit-contain cursor-pointer"
-                    src="https://drive.google.com/uc?export=view&id={{imageId}}" alt="">
+                    src="../assets/{{imageId}}" alt="">
                   <div class="imageGridOverlays" (click)="onImageClick(imageId)"></div>
                 </div>
               </ng-container>
             </div>
           </ng-container>
         </div>
+        <div class="paginationList">
+          <ng-container *ngFor="let page of pagination">
+            <div id="paginationTiles-{{page}}" class="paginationTiles" (click)="onPaginationClick(page)">{{page}}</div>
+          </ng-container>
+        </div>
       </div>
       <div class="active-img-width h-100 d-flex flex-wrap justify-content-center" id="selected-image-container">
         <img class="img-fluid object-fit-contain m-2 img-filter p-2 h-85"
-          src="https://drive.google.com/uc?export=view&id={{activeImageId}}" alt="">
+          src="../assets/{{activeImageId}}" alt="">
         <div class="d-flex w-100 justify-content-space-evenly align-items-center flex-wrap h-15">
           <button (click)="copyImgLink()" class="btn btn-blue">Copy link</button>
           <button (click)="downloadImg()" target="_blank" class="btn btn-blue">Download</button>

@@ -12,7 +12,7 @@ export class CountdownComponent implements OnInit {
   days = "";
   months = "";
   ngOnInit() {
-    const newDate: number = new Date('Aug 26 23 13:46:30').getTime();
+    const newDate: number = new Date('Nov 05 23 10:20:00').getTime();
     const countdown = setInterval(() => {
       const date: number = new Date().getTime();
       const diff: number = newDate - date;
