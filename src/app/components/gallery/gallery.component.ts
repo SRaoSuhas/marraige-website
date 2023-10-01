@@ -14,7 +14,8 @@ export class GalleryComponent implements OnInit {
   eventslist: string[] = [];
   columns: string[][] = [];
   pagination: string[] = [];
-  activePage: number = 1
+  activePage: number = 1;
+  totalPages: number = 1;
   ngOnInit() {
     this.data = JSONdata;
     this.previousScreenSize = innerWidth;
@@ -59,10 +60,16 @@ export class GalleryComponent implements OnInit {
   OnEventClick(event: string) {
     this.activeEvent = event;
     this.activeEventIndex = this.data.Gallery.Images.Events.findIndex((x: { Event: string; }) => x.Event == event);
-    this.screenSize();
+    if (this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length > 0) {
+      this.createPagination(1);
+      this.screenSize();
+    }
+    else{
+      this.columns = [];
+    }
     $(".tab").removeClass("active");
     $("#" + event).addClass("active");
-    $('#gallery-grid').scrollTop(0);
+    $('#gallery-grid').scrollTop(0); $('#gallery-grid').scrollTop(0);
   }
 
   generateMasonryGrid(columnsNo: number) {
@@ -93,20 +100,20 @@ export class GalleryComponent implements OnInit {
 
   createPagination(activePage: number) {
     this.pagination = [];
-    var totalPages = Math.ceil(this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length / 20);
+    this.totalPages = Math.ceil(this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length / 20);
     this.pagination.push("<<");
     this.pagination.push("<");
-    if (totalPages <= 5 || activePage <= 3) {
-      for (var i = 1; i <= totalPages; i++) {
+    if (this.totalPages <= 5 || activePage <= 3) {
+      for (var i = 1; i <= this.totalPages; i++) {
         this.pagination.push(i.toString());
       }
     }
-    else if (activePage >= totalPages - 2) {
-      this.pagination.push((totalPages - 4).toString());
-      this.pagination.push((totalPages - 3).toString());
-      this.pagination.push((totalPages - 2).toString());
-      this.pagination.push((totalPages - 1).toString());
-      this.pagination.push(totalPages.toString());
+    else if (activePage >= this.totalPages - 2) {
+      this.pagination.push((this.totalPages - 4).toString());
+      this.pagination.push((this.totalPages - 3).toString());
+      this.pagination.push((this.totalPages - 2).toString());
+      this.pagination.push((this.totalPages - 1).toString());
+      this.pagination.push(this.totalPages.toString());
     }
     else {
       this.pagination.push((activePage - 2).toString());
@@ -124,21 +131,24 @@ export class GalleryComponent implements OnInit {
     if (page != "<<" && page != "<" && page != ">" && page != ">>" && this.activePage != Number(page)) {
       this.createPagination(Number(page));
     }
-    else if (page == "<<") {
+    else if (page == "<<" && this.activePage != 1) {
       this.createPagination(1);
     }
     else if (page == "<" && this.activePage - 1 > 0) {
       this.createPagination(this.activePage - 1);
     }
     else {
-      var totalPages = Math.ceil(this.data.Gallery.Images.Events[this.activeEventIndex].ImageIds.length / 20);
-      if (page == ">" && this.activePage + 1 <= totalPages) {
-        this.createPagination(totalPages + 1);
+      if (page == ">" && this.activePage + 1 <= this.totalPages) {
+        this.createPagination(this.activePage + 1);
       }
-      else if (page == ">>") {
-        this.createPagination(totalPages);
+      else if (page == ">>" && this.activePage != this.totalPages) {
+        this.createPagination(this.totalPages);
       }
     }
     this.screenSize();
+    $('#gallery-grid').scrollTop(0);
+    $('html, body').animate({
+      'scrollTop': $("#galleryTabs").position().top - 75
+    }, 10);
   }
 }
