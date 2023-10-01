@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   data: any;
   ngOnInit() {
     this.data = JSONdata;
-    var headerImg = "https://drive.google.com/uc?export=view&id=" + this.data.HeaderBackground;
+    var headerImg = "../assets/" + this.data.HeaderBackground;
     $(".headerBg").css("background-image", "url(" + headerImg + ")");
   }
   openMenu = false;
