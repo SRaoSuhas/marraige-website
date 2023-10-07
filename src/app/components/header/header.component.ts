@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   onNavClick(nav: string) {
     $('html, body').animate({
       'scrollTop': $("#" + nav).position().top
-    }, 1000);
+    }, 0);
 
     if (this.openMenu) {
       this.openMenuInMob();

@@ -44,8 +44,8 @@
     "FriendsAndFamily": {
         "Bride": [
             {
-                "ImageId": "friendsAndFamily/brideside/K S Sathyanarayan.webp",
-                "Name": "K S Sathyanarayan",
+                "ImageId": "friendsAndFamily/brideside/K S Satyanarayan.webp",
+                "Name": "K S Satyanarayan",
                 "PhoneNumber": "+91 77604 02010"
             },
             {
@@ -94,11 +94,6 @@
                 "ImageId": "friendsAndFamily/groomside/Nandakumar.webp",
                 "Name": "Nandakumar",
                 "PhoneNumber": "+91 95382 19637"
-            },
-            {
-                "ImageId": "friendsAndFamily/groomside/Shamanth S Nadig.webp",
-                "Name": "Shamanth S Nadig",
-                "PhoneNumber": "+91 77609 07052"
             }
         ]
     },
@@ -129,27 +124,41 @@
                 },
                 {
                     "Event": "Pre-Wedding",
-                    "ImageIds": [
-                    ]
+                    "ImageIds": []
                 },
                 {
                     "Event": "Wedding",
-                    "ImageIds": [
-                    ]
+                    "ImageIds": []
                 },
                 {
                     "Event": "Reception",
-                    "ImageIds": [
-                    ]
+                    "ImageIds": []
                 }
             ]
         },
         "Videos": {
             "BannerId": "",
-            "VideoIds": [
-                "evUD1VHOpOE",
-                "HI2FQ7UGWw4",
-                "i4yzAKH0sfE"
+            "Events": [
+                {
+                    "Event": "Engagement",
+                    "VideoIds": [
+                        "evUD1VHOpOE",
+                        "HI2FQ7UGWw4",
+                        "i4yzAKH0sfE"
+                    ]
+                },
+                {
+                    "Event": "Pre-Wedding",
+                    "VideoIds": []
+                },
+                {
+                    "Event": "Wedding",
+                    "VideoIds": []
+                },
+                {
+                    "Event": "Reception",
+                    "VideoIds": []
+                }
             ]
         }
     },

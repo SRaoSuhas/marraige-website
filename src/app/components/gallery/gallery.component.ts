@@ -16,6 +16,7 @@ export class GalleryComponent implements OnInit {
   pagination: string[] = [];
   activePage: number = 1;
   totalPages: number = 1;
+
   ngOnInit() {
     this.data = JSONdata;
     this.previousScreenSize = innerWidth;
@@ -67,7 +68,7 @@ export class GalleryComponent implements OnInit {
     else{
       this.columns = [];
     }
-    $(".tab").removeClass("active");
+    $(".tab.image").removeClass("active");
     $("#" + event).addClass("active");
     $('#gallery-grid').scrollTop(0); $('#gallery-grid').scrollTop(0);
   }

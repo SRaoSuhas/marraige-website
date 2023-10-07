@@ -1,14 +1,14 @@
 <div class="py-5 d-flex flex-column align-items-center" id="gallery">
   <div class="container-fluid bg-gallery" style="padding: 5rem 0">
-    <div class="section-title position-relative text-center" style="margin-bottom: 60px;">
+    <div class="m-4 position-relative text-center" style="margin-bottom: 60px;">
       <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
       <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
-      <i class="far fa-heart text-white"></i>
+      <span class="text-white heart material-symbols-outlined">favorite</span>
     </div>
   </div>
   <div class="tabs" id="galleryTabs">
     <ng-container *ngFor="let event of eventslist">
-      <button id="{{event}}" class="tab" (click)="OnEventClick(event)">{{event}}</button>
+      <button id="{{event}}" class="tab image" (click)="OnEventClick(event)">{{event}}</button>
     </ng-container>
   </div>
   <ng-container *ngIf="columns.length > 0">

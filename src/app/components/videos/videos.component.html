@@ -1,28 +1,39 @@
-<div class="py-5" id="videos">
+<div class="py-5 d-flex flex-column align-items-center" id="videos">
     <div class="container-fluid bg-gallery" style="padding: 5rem 0">
-        <div class="section-title position-relative text-center" style="margin-bottom: 60px;">
+        <div class="m-4 position-relative text-center" style="margin-bottom: 60px;">
             <h1 class="font-secondary display-4 text-white">Our Video Gallery</h1>
-            <i class="far fa-heart text-white"></i>
+            <span class="text-white heart material-symbols-outlined">favorite</span>
         </div>
         <div class="d-flex gallery-carousel">
         </div>
     </div>
-    <div class="d-flex max-h-50vh m-3">
-        <div class="d-flex gap-1 align-items-center flex-wrap h-100 justify-content-center overflow-y-scroll">
-            <div class="containersss">
-                <ng-container *ngFor="let column of columns">
-                    <div class="columnsss">
-                        <ng-container *ngFor="let thumbnail of column">
-                            <div class="thumbnailPosts ">
-                                <img class="img-fluid w-24 object-fit-contain cursor-pointer" src="https://img.youtube.com/vi/{{thumbnail}}/maxresdefault.jpg" alt="">
-                                <div class="youtube-play-btn" (click)="onThumbnailClick(thumbnail)">
-                                    <span></span>
+    <div class="tabs" id="galleryTabs">
+        <ng-container *ngFor="let event of eventslist">
+            <button id="video-{{event}}" class="tab video" (click)="OnEventClick(event)">{{event}}</button>
+        </ng-container>
+    </div>
+    <ng-container *ngIf="columns.length > 0">
+        <div class="d-flex max-h-50vh m-3">
+            <div class="d-flex gap-1 align-items-center flex-wrap h-100 justify-content-center overflow-y-scroll">
+                <div class="containersss">
+                    <ng-container *ngFor="let column of columns">
+                        <div class="columnsss">
+                            <ng-container *ngFor="let thumbnail of column">
+                                <div class="thumbnailPosts ">
+                                    <img class="img-fluid w-24 object-fit-contain cursor-pointer"
+                                        src="https://img.youtube.com/vi/{{thumbnail}}/maxresdefault.jpg" alt="">
+                                    <div class="youtube-play-btn" (click)="onThumbnailClick(thumbnail)">
+                                        <span></span>
+                                    </div>
                                 </div>
-                            </div>
-                        </ng-container>
-                    </div>
-                </ng-container>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+                </div>
             </div>
         </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="columns.length == 0">
+        <div>Videos are yet to be uploaded.... Please wait</div>
+    </ng-container>
 </div>

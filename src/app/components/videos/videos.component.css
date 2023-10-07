@@ -76,7 +76,7 @@ img {
     width: 0;
     height: 0;
     left: 0px;
-    top: -5px;
+    top: -6px;
     border-left: 16px solid #E47A2E;
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
@@ -101,4 +101,91 @@ img {
 .max-h-50vh{
     max-height: 50vh;
     overflow-y: auto;
+}
+
+
+.h-15 {
+    height: 15%;
+}
+
+.h-85 {
+    height: 85%;
+}
+
+.btn-blue {
+    color: blue;
+    border-color: blue;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 10rem;
+}
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: blue;
+}
+
+.btn-blue::focus {
+    outline: none;
+}
+
+.grid-width {
+    width: 70%;
+}
+
+.active-img-width {
+    width: 30%;
+}
+
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+.tabs {
+    margin: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.tab {
+    border: solid 1px;
+    border-radius: 10px;
+    background: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.tab:hover {
+    background: lightblue;
+}
+
+.tab.active {
+    background: royalblue;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .h-70vh {
+        height: 50vh !important;
+    }
+
+    .grid-width,
+    .active-img-width {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .btn {
+        margin: 0.5rem;
+        font-size: 0.625rem;
+    }
+
+    .h-85{
+        height: 70%;
+    }
 }
