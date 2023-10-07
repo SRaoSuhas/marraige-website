@@ -1,7 +1,16 @@
-.h-20{
+.h-20 {
     height: 20rem;
 }
 
-.justify-content-center{
+.justify-content-center {
     justify-content: center;
+}
+
+.locationBtn {
+    border-radius: 10rem !important;
+}
+
+.locationBtn:hover .locationLink {
+    color: white !important;
+    text-decoration: none !important;
 }

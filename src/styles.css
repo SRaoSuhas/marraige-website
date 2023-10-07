@@ -10977,3 +10977,23 @@ a.text-dark:focus {
   background: lightgrey;
   border-radius: 10px;
 }
+
+.heart::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  bottom: 18px;
+  left: calc(50% - 80px);
+  background: #E47A2E;
+}
+
+.heart::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  bottom: 18px;
+  right: calc(50% - 80px);
+  background: #E47A2E;
+}
