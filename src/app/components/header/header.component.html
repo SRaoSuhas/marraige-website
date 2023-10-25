@@ -2,12 +2,13 @@
   class="navbar sticky-top shadow-sm navbar-expand-lg py-3 py-lg-0 px-lg-5 d-flex justify-content-center headerBg gap-5rem flex-column">
   <div class="menu-list">
     <div id="nav-menu-lap" class="d-flex align-items-center justify-content-between">
-      <div>
-        <a (click)="onNavClick('home')" class="navbar-brand mx-5 d-block cursor-pointer">
+      <div class="d-flex">
+        <a (click)="onNavClick('home')" class="navbar-brand ml-5 d-block cursor-pointer">
           <h1 class="font-secondary text-white mb-n2 text-center">{{data.About.Groom.Name}} <span class="text-primary">&
             </span> {{data.About.Bride.Name}} </h1>
             <p class="our-wedding-page">OUR WEDDING PAGE</p>
         </a>
+        <img class="img-width-5rem" src="../assets/hearts.svg">
       </div>
       <div>
         <div class="navbar-nav ml-auto py-0">
